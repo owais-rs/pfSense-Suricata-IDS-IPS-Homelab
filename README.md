@@ -1,6 +1,6 @@
 
 
-**Design and Implementation of a pfSense Firewall with Suricata IDS/IPS in a Virtualized Homelab Environment**
+# **Design and Implementation of a pfSense Firewall with Suricata IDS/IPS in a Virtualized Homelab Environment**
 
 ## Objective
 
