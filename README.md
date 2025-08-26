@@ -41,9 +41,9 @@ The objective of this project was to build and configure a homelab that simulate
 
 ### VM Resources
 
-* pfSense: 2 vCPUs, 2 GB RAM, Intel PRO/1000 NICs.
-* Windows 10: 2–4 GB RAM, 2 vCPUs.
-* Kali Linux: 2 vCPUs, 2 GB RAM.
+* pfSense: 2 vCPUs, 2 GB RAM, Intel PRO/1000 NICs (For all 3 adapters).
+* Windows 10: 4 GB RAM, 2 vCPUs, Intel PRO/1000 NIC.
+* Kali Linux: 2 vCPUs, 2 GB RAM, Intel PRO/1000 NIC.
 
 ---
 
@@ -173,18 +173,13 @@ The objective of this project was to build and configure a homelab that simulate
 * Cause: Suricata was in Legacy Mode and default rules were ALERT-only.
 * Resolution: Switched to Inline IPS mode and created a **dropsid.conf** to convert categories (e.g., emerging-scan.rules) from ALERT to DROP.
 
-### 5. dropsid.conf Syntax
-
-* Issue: Used incorrect identifiers in dropsid.conf (e.g., ET-emergingthreats-scan).
-* Resolution: Corrected syntax to use exact rule filenames (e.g., emerging-scan.rules).
-
-### 6. Hydra Failing with FTP
+### 5. Hydra Failing with FTP
 
 * Issue: Hydra produced connection errors when targeting FTP.
 * Cause: No FTP service running on victim.
 * Resolution: Installed IIS FTP service, allowed port 21 in Windows firewall, then re-ran Hydra successfully.
 
-### 7. Inline IPS Verification
+### 6. Inline IPS Verification
 
 * Issue: Difficulty confirming Suricata drops.
 * Resolution: Verified with Nmap. Ports reported as filtered indicated drops. Confirmed in Suricata rules tab that affected rules were set to DROP.
