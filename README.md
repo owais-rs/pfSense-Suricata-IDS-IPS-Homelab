@@ -1,8 +1,4 @@
-# pfSense-Suricata-IDS-IPS-Homelab
 
-# pfSense + Suricata IDS/IPS Homelab
-
-## Title
 
 **Design and Implementation of a pfSense Firewall with Suricata IDS/IPS in a Virtualized Homelab Environment**
 
